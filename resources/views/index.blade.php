@@ -15,7 +15,6 @@
         <ul class="navbar-items flexbox-col" style="margin-top: 20px;">
             <li class="navbar-item flexbox-left">
                 <a href="{{ route('accueil') }}" class="navbar-item-inner flexbox-left">
-                <a class="navbar-item-inner flexbox-left">
                     <div class="navbar-item-inner-icon-wrapper flexbox">
                         <i class="fa-solid fa-house-chimney"></i>
                     </div>
