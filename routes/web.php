@@ -13,14 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route principale redirigeant vers l'accueil
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect()->route('accueil');
+})->name('root');
 
-Route::get('/index', function () {
-    return view('index');
-});
-
+// Page d'accueil
 Route::get('/accueil', function () {
-    return view('accueil');
-});
+    return view('index');
+})->name('accueil');
+
+// Menus
+Route::get('/menus', function () {
+    return view('menus');
+})->name('menus');
+
+// Sandwichs
+Route::get('/sandwichs', function () {
+    return view('sandwichs');
+})->name('sandwichs');
+
+// Boissons
+Route::get('/boissons', function () {
+    return view('boissons');
+})->name('boissons');
+
+// Snacks
+Route::get('/snacks', function () {
+    return view('snacks');
+})->name('snacks');
