@@ -42,3 +42,7 @@ Route::get('/boissons', [BoissonsController::class, 'show'])->name('boissons');
 Route::get('/snacks', function () {
     return view('snacks');
 })->name('snacks');
+
+Route::get('/panier', function () {
+    return view('panier');
+})->name('panier');
