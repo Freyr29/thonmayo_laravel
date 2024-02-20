@@ -15,6 +15,6 @@
     </style>
 </head>
 <body>
-@include('layout.menus') 
+@include('layout.layout_menu') 
 </body>
 </html>
