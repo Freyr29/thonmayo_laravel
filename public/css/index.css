@@ -52,6 +52,22 @@ header {
     font-size: 5vh;
 }
 
+.panier {
+    color: white;
+    font-size: 5vh;
+    position: fixed;
+    right: 30px;
+}
+
+.panier:hover{
+    color: rgb(239, 239, 239);
+}
+
+.cadi:visited {
+    color: white;
+    text-decoration: none;
+}
+
 .flexbox {
     display: flex;
     justify-content: center;
@@ -189,4 +205,18 @@ header {
 #navbar:hover .link-text {
     width: calc(100% - calc(5rem - 8px));
     opacity: 1;
+}
+
+.sand {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    height: 90vh;
+}
+
+.sand2 {
+    width: 100%; 
+    max-width: 1200px; 
+    margin-top: 5%; 
+    margin-left: 7%;
 }

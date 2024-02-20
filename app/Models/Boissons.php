@@ -32,9 +32,9 @@ class Boissons extends Authenticatable
      */
     protected $casts = [
         'id_boisson' => 'integer',
-        'prix' => 'integer'
-        'image_url' => 'string'
-        'type' => 'string'
+        'prix' => 'integer',
+        'image_url' => 'string',
+        'type' => 'string',
         'taille_cl' => 'integer'
     ];
 }
