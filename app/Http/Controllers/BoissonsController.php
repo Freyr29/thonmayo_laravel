@@ -7,14 +7,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\View\View;
 
-class SandwichsController extends Controller
+class BoissonsController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests;
 
     public function show(): View
     {
-        $sandwichs = DB::select('select * from sandwich');
+        $boissons = DB::select('select * from boissons');
 
-        return view('sandwichs')->with('sandwichs', $sandwichs);
+        return view('boissons')->with('boissons', $boissons);
     }
 }

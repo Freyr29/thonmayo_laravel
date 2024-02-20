@@ -62,5 +62,27 @@
             </li>
         </ul>
     </nav>
+    <div style="display: flex; justify-content: center; align-items: flex-start; height: 90vh;">
+    <div style="width: 100%; max-width: 1200px; margin-top: 5%; margin-left: 10%;">
+        <div class="col-span-12 grid grid-cols-3 gap-4">
+            <div class="card min-w-0 max-w-md" style="display: flex; gap: 10%;">
+                @foreach ($boissons as $boisson)
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden w-72">
+                        <!-- Utiliser l'URL de l'image depuis la base de données -->
+                        <img src="{{ $boisson->image_url }}" alt="Image du {{ $boisson->nom_boisson }}" style="width: 300px; height: 300px; object-fit: cover;" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h2 class="font-semibold text-lg">{{ $boisson->nom_boisson }}</h2>
+                            <p class="text-gray-600">{{ $boisson->prix }}€</p>
+                            <p class="text-gray-500">{{ $boisson->type }} de {{ $boisson->taille_cl }}cl</p>
+                            <div class="mt-4">
+                                <a href="#" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md inline-block">Acheter</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -17,6 +17,9 @@ class Snacks extends Migration
             `nom_snack` varchar(255) NOT NULL,
             `prix` float NOT NULL
         )');
+        DB::statement('INSERT INTO snacks VALUES(1,"Frites maisons", 5)');
+        DB::statement('INSERT INTO snacks VALUES(2,"Patates sautées maisons", 6)');
+        DB::statement('INSERT INTO snacks VALUES(3,"Salade", 4)');
     }
 
     /**
