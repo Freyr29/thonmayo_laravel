@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Mon Panier ThonMayo</div>
-        <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
+        <div class="commander"><a class="buttonpaid" href="">Commander</a></div>
     </header>
     @include('layout.layout_menu')
 </body>
