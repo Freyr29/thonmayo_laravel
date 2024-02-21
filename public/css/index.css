@@ -59,8 +59,59 @@ header {
     right: 30px;
 }
 
-.panier:hover{
-    color: rgb(239, 239, 239);
+.fa-cart-shopping{
+    transition: .3s;
+}
+
+.fa-cart-shopping:hover{
+    /* color: rgb(235, 235, 235); */
+    transition: .2s;
+}
+
+.cadi {
+    color: #FFF;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 8px;
+	position: relative;
+}
+
+.cadi, .fa-cart-shopping {
+    font-size: 1.375rem;
+}
+
+.commander {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    right: 30px;
+    font-weight: normal;
+}
+
+.buttonpaid {
+    color: #FFF;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 3rem;
+	border-radius: 8px;
+	position: relative;
+}
+
+.buttonpaid:hover, .buttonpaid:focus, .buttonpaid.active {
+	background-color: rgb(165, 138, 221);
+	outline: 0;
+}
+
+.cadi:hover, .cadi:focus, .cadi.active {
+	background-color: rgb(165, 138, 221);
+	outline: 0;
 }
 
 .cadi:visited {

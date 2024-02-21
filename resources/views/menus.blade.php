@@ -13,6 +13,7 @@
 <body>
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Les Menus de ThonMayo</div>
+        <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
     </header>
     <nav id="navbar">
         <ul class="navbar-items flexbox-col" style="margin-top: 20px;">
