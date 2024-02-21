@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SandwichsController;
 use App\Http\Controllers\BoissonsController;
+use App\Http\Controllers\SnacksController;
+
 
 
 /*
@@ -37,11 +39,9 @@ Route::get('/sandwichs', [SandwichsController::class, 'show'])->name('sandwichs'
 // Boissons
 Route::get('/boissons', [BoissonsController::class, 'show'])->name('boissons');
 
-
 // Snacks
-Route::get('/snacks', function () {
-    return view('snacks');
-})->name('snacks');
+Route::get('/snacks', [SnacksController::class, 'show'])->name('snacks');
+
 
 Route::get('/panier', function () {
     return view('panier');

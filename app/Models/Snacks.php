@@ -19,6 +19,8 @@ class Snacks extends Authenticatable
     protected $fillable = [
         'id_snack',
         'nom_snack',
+        'ingredients',
+        'image_snack',
         'prix'
     ];
 
@@ -32,3 +34,4 @@ class Snacks extends Authenticatable
         'prix' => 'integer'
     ];
 }
+
