@@ -46,3 +46,7 @@ Route::get('/snacks', [SnacksController::class, 'show'])->name('snacks');
 Route::get('/panier', function () {
     return view('panier');
 })->name('panier');
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
