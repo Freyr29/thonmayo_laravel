@@ -19,8 +19,8 @@ class Snacks extends Migration
             `image_url` varchar(1000) NOT NULL,
             `prix` float NOT NULL
         )');
-        DB::statement('INSERT INTO snacks VALUES(1,"Frites maisons","pomme de terre françaises","https://img.cuisineaz.com/660x660/2016/07/26/i32581-frites-a-la-poele.jpeg", 3.43)');
-        DB::statement('INSERT INTO snacks VALUES(2,"Patates sautées maisons","pomme de terre françaises","https://static.750g.com/images/1200-675/aeb1c574fad00aec34a19a476eaf68fa/la-cuisson.jpg", 4.23)');
+        DB::statement('INSERT INTO snacks VALUES(1,"Frites maisons","Pommes de terre françaises, cuites à l\'huile d\'olive","https://img.cuisineaz.com/660x660/2016/07/26/i32581-frites-a-la-poele.jpeg", 3.43)');
+        DB::statement('INSERT INTO snacks VALUES(2,"Patates sautées maisons","Pommes de terre françaises","https://static.750g.com/images/1200-675/aeb1c574fad00aec34a19a476eaf68fa/la-cuisson.jpg", 4.23)');
         DB::statement('INSERT INTO snacks VALUES(3,"Salade maison","Salade à la tomate et à la salade","https://media.soscuisine.com/images/recettes/large/331.jpg", 1.69)');
         DB::statement('INSERT INTO snacks VALUES(4,"Chips Lays","Chips de luxe" , "https://www.lays.fr/images/default-source/products/packshots/lays-natural.png?sfvrsn=2", 0.50)');
         DB::statement('INSERT INTO snacks VALUES(5,"Sauce barbecue","Sauce barbecue maison", "https://static.750g.com/images/1200-630/bd34ac3c244d9779d4b25fd804e4d306/adobestock-271099773.jpeg", 1.12)');
