@@ -27,10 +27,6 @@ class Sandwich extends Migration
         DB::statement('INSERT INTO sandwich VALUES(6, "L\'Oslo", "Préparé sur du pain Suédois avec du saumon, de la crème fraîche, de la salade et des tomates cerises.", "https://cdn.discordapp.com/attachments/1077537469576269894/1201888260109123584/stocholome.png?ex=65e7242b&is=65d4af2b&hm=131918abc15bc1fd0222b4807c87da743d047b8af8c2b51315410254af9a5c33&", 10.37)');
         DB::statement('INSERT INTO sandwich VALUES(7, "Le Moscou", "Préparé sur du pain Suédois avec du saumon, du fromage russe le Tilsit, du Raifort, des cornichons, et surtout du caviar noir d\'esturgeon.", "https://cdn.discordapp.com/attachments/1077537469576269894/1209854735641747516/DALLE_2024-02-21_10.png?ex=65e87006&is=65d5fb06&hm=1a5129607154aad4bf9478db85680fc2c726b6c0d0960090d5f42a5e5b363734&", 73.46)');
 
-
-        
-
-
     }
 
     /**
