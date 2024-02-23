@@ -14,6 +14,7 @@
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Les Sandwichs de ThonMayo</div>
         <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
+        <div class="seCo"><a class="log" href="{{ route('login') }}">se connecter<i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
     </header>
     @include('layout.layout_menu')
     <div class="sand">

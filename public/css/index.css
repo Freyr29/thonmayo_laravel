@@ -55,6 +55,40 @@ header {
     font-size: 5vh;
 }
 
+.seCo {
+    color: white;
+    font-size: 3vh;
+    position: fixed;
+    right: 90px;
+    font-family: var(--font-main);
+}
+
+.log {
+    color: #FFF;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12rem;
+	height: 3rem;
+	border-radius: 8px;
+	position: relative;
+}
+
+.log:hover, .log:focus, .log.active {
+	background-color: rgb(165, 138, 221);
+	outline: 0;
+}
+
+.log:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.fa-arrow-right-to-bracket {
+    margin-left: 5px;
+}
+
 .panier {
     color: white;
     font-size: 5vh;
