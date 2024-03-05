@@ -25,7 +25,6 @@ class Boissons extends Migration
         DB::statement('INSERT INTO boissons VALUES(3, "Coca Cola Chery", 1.97, "image/coca-cola-chery-33cl.jpg", "Canette", 33)');
         DB::statement('INSERT INTO boissons VALUES(3, "Ice Tea", 1.76, "image/ice-tea-33cl.jpg", "Canette", 33)');
         DB::statement('INSERT INTO boissons VALUES(3, "Oasis", 1.76, "image/oasis-33cl.jpg", "Canette", 33)');
-
     }
     /**
      * Reverse the migrations.
