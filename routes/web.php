@@ -50,3 +50,7 @@ Route::get('/panier', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');

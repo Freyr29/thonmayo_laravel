@@ -13,6 +13,7 @@
 <body>
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Les Sandwichs de ThonMayo</div>
+        <div class="utilisateur"><a class="user" href="{{ route('profil') }}"><i class="fa-solid fa-user"></i></a></div>
         <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
         <div class="seCo"><a class="log" href="{{ route('login') }}">se connecter<i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
     </header>
@@ -30,7 +31,7 @@
                                 <p class="text-gray-600">{{ $sandwich->prix }}€</p>
                                 <p class="text-gray-500">{{ $sandwich->ingredients }}</p>
                                 <div class="mt-4">
-                                    <a href="#" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md inline-block">Acheter</a>
+                                    <a href="#" class="addpanier">Ajouter au Panier</a>
                                 </div>
                             </div>
                         </div>

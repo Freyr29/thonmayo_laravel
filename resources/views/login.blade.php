@@ -11,12 +11,12 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="titre" style="font-family: 'Montserrat', sans-serif;">Mon Compte ThonMayo</div>
-        <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
-    </header>
-    @include('layout.layout_menu')
-    <div class="login-root">
+  <header>
+      <div class="titre" style="font-family: 'Montserrat', sans-serif;">Mon Compte ThonMayo</div>
+      <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
+  </header>
+  @include('layout.layout_menu')
+  <div class="login-root">
     <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
       <div class="box-root padding-top--200 flex-flex flex-direction--column" style="flex-grow: 1;">
         <div class="formbg-outer">
