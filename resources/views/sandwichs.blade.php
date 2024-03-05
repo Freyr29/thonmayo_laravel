@@ -20,7 +20,7 @@
     <div class="sand">
         <div class="sand2" >
             <div class="col-span-12 grid grid-cols-3 gap-4">
-                <div class="card min-w-0 max-w-md" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10%;">
+                <div class="card min-w-0 max-w-md sand3">
                     @foreach ($sandwichs as $sandwich)
                         <div class="bg-white shadow-md rounded-lg overflow-hidden w-72">
                             <!-- Utiliser l'URL de l'image depuis la base de données -->

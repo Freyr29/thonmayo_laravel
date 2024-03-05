@@ -29,23 +29,23 @@
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
-                    <label for="password">Password</label>
+                    <label for="password">Mot de passe</label>
                     <div class="reset-pass">
-                      <a href="#">Forgot your password?</a>
+                      <a href="#">Mot de passe oublié ?</a>
                     </div>
                   </div>
                   <input type="password" name="password">
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                   <label for="checkbox">
-                    <input type="checkbox" name="checkbox"> Stay signed in for a week
+                    <input type="checkbox" name="checkbox"> Se souvenir de moi
                   </label>
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Continue">
                 </div>
                 <div class="field">
-                  <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
+                  <a class="ssolink" href="#">Utiliser un compte google</a>
                 </div>
               </form>
             </div>
