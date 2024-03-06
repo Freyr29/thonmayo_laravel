@@ -45,7 +45,7 @@ Route::get('/snacks', [SnacksController::class, 'show'])->name('snacks');
 
 
 Route::get('/panier', [PanierController::class, 'index'])->middleware('auth')->name('panier');
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -56,3 +56,10 @@ Route::get('/login', function () {
 Route::get('/profil', function () {
     return view('profil');
 })->name('profil');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
