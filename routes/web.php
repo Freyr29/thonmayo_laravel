@@ -52,3 +52,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');
