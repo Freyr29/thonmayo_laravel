@@ -45,7 +45,7 @@
                   <input type="submit" name="submit" value="Continue">
                 </div>
                 <div class="field">
-                  <a class="ssolink" href="#">Utiliser un compte google</a>
+                  <a class="ssolink" href="#">Créer un compte</a>
                 </div>
               </form>
             </div>
