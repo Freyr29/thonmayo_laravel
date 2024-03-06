@@ -58,9 +58,7 @@
                                 </div>
 
                                 <div class="field padding-bottom--24">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
-                                    </button>
+                                  <input type="submit" name="submit" value="Continue">
 
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
@@ -68,17 +66,13 @@
                                         </a>
                                     @endif
                                 </div>
+                                <div class="field">
+                                  <a class="ssolink" href="#">Créer un compte</a>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
-                </div>
-                <div class="field">
-                  <a class="ssolink" href="#">Créer un compte</a>
-                </div>
-              </form>
             </div>
         </div>
     </div>
