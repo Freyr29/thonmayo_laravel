@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SandwichsController;
 use App\Http\Controllers\BoissonsController;
 use App\Http\Controllers\SnacksController;
+use App\Http\Controllers\PanierController;
 
 
 
@@ -43,9 +44,10 @@ Route::get('/boissons', [BoissonsController::class, 'show'])->name('boissons');
 Route::get('/snacks', [SnacksController::class, 'show'])->name('snacks');
 
 
-Route::get('/panier', function () {
-    return view('panier');
-})->name('panier');
+Route::get('/panier', [PanierController::class, 'index'])->middleware('auth')->name('panier');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/login', function () {
     return view('login');

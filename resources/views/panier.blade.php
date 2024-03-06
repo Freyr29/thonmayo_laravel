@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<a href="{{ route('panier') }}">Mon Panier</a>
 <head>
     <meta charset="UTF-8">
     <title>Mon Panier</title>
