@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Se Connecter</title>
+    <title>S'inscrire</title>
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
     <link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.css') }}">
@@ -22,18 +22,21 @@
                 <div class="formbg-outer">
                     <div class="formbg">
                         <div class="formbg-inner padding-horizontal--48">
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="POST" action="{{ route('register') }}">
                                 @csrf
-
-                                @auth
-                                    {{ __('You are logged in!') }}
-                                @else
-                                    {{ __('You are not logged in.') }}
-                                @endauth
+                                <div class="field padding-bottom--24">
+                                    <label for="name">{{ __('Nom') }}</label>
+                                    <input id="name" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
 
                                 <div class="field padding-bottom--24">
                                     <label for="email">{{ __('Adresse Email') }}</label>
-                                    <input id="email" type="email" name="email" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email">
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -43,7 +46,7 @@
 
                                 <div class="field padding-bottom--24">
                                     <label for="password">{{ __('Mot de passe') }}</label>
-                                    <input id="password" type="password" name="password" required autocomplete="current-password">
+                                    <input id="password" type="password" name="password" required autocomplete="new-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -51,39 +54,20 @@
                                     @enderror
                                 </div>
 
-                                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                                    <label for="remember">
-                                        <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Se souvenir de moi') }}
-                                    </label>
+                                <div class="field padding-bottom--24">
+                                    <label for="password-confirm">{{ __('Confirmer le mot de passe') }}</label>
+                                    <input id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
                                 </div>
 
                                 <div class="field padding-bottom--24">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
+                                        {{ __('S\'inscrire') }}
                                     </button>
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Mot de passe oublié ?') }}
-                                        </a>
-                                    @endif
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                  <label for="checkbox">
-                    <input type="checkbox" name="checkbox"> Se souvenir de moi
-                  </label>
-                </div>
-                <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
-                </div>
-                <div class="field">
-                  <a class="ssolink" href="#">Créer un compte</a>
-                </div>
-              </form>
             </div>
         </div>
     </div>
