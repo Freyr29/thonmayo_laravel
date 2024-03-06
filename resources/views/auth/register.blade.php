@@ -60,9 +60,9 @@
                                 </div>
 
                                 <div class="field padding-bottom--24">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('S\'inscrire') }}
-                                    </button>
+                                    <div class="field padding-bottom--24">
+                                        <input type="submit" name="submit" value="S'inscrire">
+                                    </div>
                                 </div>
                             </form>
                         </div>
