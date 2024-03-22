@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SandwichsController;
-use App\Http\Controllers\MenusController;
 use App\Http\Controllers\BoissonsController;
 use App\Http\Controllers\SnacksController;
 use App\Http\Controllers\PanierController;
+use App\Http\Controllers\MenusController;
+
 
 
 
@@ -55,6 +56,4 @@ Route::get('/login', function () {
 Route::get('/profil', function () {
     return view('profil');
 })->name('profil');
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
