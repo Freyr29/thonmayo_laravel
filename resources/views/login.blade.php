@@ -58,27 +58,15 @@
                                 </div>
 
                                 <div class="field padding-bottom--24">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
-                                    </button>
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Mot de passe oublié ?') }}
-                                        </a>
-                                    @endif
+                                  <input type="submit" name="submit" value="Continue">
+                                </div>
+                                <div class="field">
+                                    <a class="ssolink" href="{{ route('register') }}">Vous n'avez pas encore de compte? </br> Créer un compte</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
-                </div>
-                <div class="field">
-                  <a class="ssolink" href="#">Créer un compte</a>
-                </div>
-              </form>
             </div>
         </div>
     </div>

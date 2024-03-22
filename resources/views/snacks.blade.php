@@ -30,7 +30,7 @@
                             <p class="text-gray-600">{{ $snack->prix }}€</p>
                             <p class="text-gray-500">{{ $snack->ingredients }}</p>
                             <div class="mt-4">
-                                <a href="#" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md inline-block">Acheter</a>
+                                <a href="#" class="addpanier">Ajouter au Panier</a>
                             </div>
                         </div>
                     </div>

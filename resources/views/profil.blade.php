@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@300 & display=swap');
     </style>
 </head>
-<body>
+<body style="position: fixed; top: 0;">
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Mon Profile ThonMayo</div>
         <div class="utilisateur"><a class="user" href="{{ route('profil') }}"><i class="fa-solid fa-user"></i></a></div>
@@ -44,7 +44,7 @@
                     <div class="row mt-3">
                         <div class="col-md-12"><label class="labels">Rôle</label><input type="text" class="form-control" placeholder="Votre Rôle" value=""></div>
                     </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                    <div class="mt-5 text-center"><button class="savebutton" type="button">Sauvegarder</button></div>
                 </div>
             </div>
         </div>
