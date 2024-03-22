@@ -59,15 +59,9 @@
 
                                 <div class="field padding-bottom--24">
                                   <input type="submit" name="submit" value="Continue">
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Mot de passe oublié ?') }}
-                                        </a>
-                                    @endif
                                 </div>
                                 <div class="field">
-                                  <a class="ssolink" href="#">Créer un compte</a>
+                                <a class="ssolink" href="{{ route('register') }}">Vous n'avez pas encore de compte? </br> Créer un compte</a>
                                 </div>
                             </form>
                         </div>
