@@ -21,7 +21,7 @@ class Sandwich extends Migration
         )');
         DB::statement('INSERT INTO sandwich VALUES(1, "Le London", "Pain complet, roast beef, cheddar affiné, roquette, chutney aux oignons rouges.", "image/london.png", 9)');
         DB::statement('INSERT INTO sandwich VALUES(2, "Le Santiago ", "Pain aux sésames, chorizo, tabasco, salade, rondelles de poivrons, jalapenos.", "image/santiago.png", 7)');
-        DB::statement('INSERT INTO sandwich VALUES(3, "Le Dakar", "Pain complet, poulet frit, pastèqu, sauce michigan.", "image/Le dakar.png", 8.5)');
+        DB::statement('INSERT INTO sandwich VALUES(3, "Le Dakar", "Pain complet, poulet frit, pastèque, sauce michigan.", "image/Le dakar.png", 8.5)');
         DB::statement('INSERT INTO sandwich VALUES(4, "Le Dubaï", "Pain pita artisanal légèrement grillé, lamelles de steak d\'agneau grillé, romarin, huile d\'olive, houmous riche et crémeux.", "image/le dubai.png", 6)');
         DB::statement('INSERT INTO sandwich VALUES(5, "Le Parisien", "Pain blanc, jambon en tranche, salade, tranches de tomates, beurre.", "image/parisien.png", 8)');
         DB::statement('INSERT INTO sandwich VALUES(6, "L\'Oslo", "Pain Suédois, saumon, crème fraîche, salade, tomates cerises.", "image/oslo.png", 10.37)');

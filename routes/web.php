@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SandwichsController;
+use App\Http\Controllers\MenusController;
 use App\Http\Controllers\BoissonsController;
 use App\Http\Controllers\SnacksController;
 use App\Http\Controllers\PanierController;
@@ -30,9 +31,7 @@ Route::get('/accueil', function () {
 })->name('accueil');
 
 // Menus
-Route::get('/menus', function () {
-    return view('menus');
-})->name('menus');
+Route::get('/menus', [MenusController::class, 'show'])->name('menus');
 
 // Sandwichs
 Route::get('/sandwichs', [SandwichsController::class, 'show'])->name('sandwichs');
@@ -45,7 +44,7 @@ Route::get('/snacks', [SnacksController::class, 'show'])->name('snacks');
 
 
 Route::get('/panier', [PanierController::class, 'index'])->middleware('auth')->name('panier');
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

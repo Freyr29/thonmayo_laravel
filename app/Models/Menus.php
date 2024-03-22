@@ -22,6 +22,7 @@ class Menus extends Authenticatable
         'id_sandwich',
         'id_boisson',
         'id_snack',
+        'image_url',
         'prix',
     ];
 
@@ -32,9 +33,11 @@ class Menus extends Authenticatable
      */
     protected $casts = [
         'id_menu' => 'integer',
+        'nom_menu' => 'string',
         'id_sandwich' => 'integer',
         'id_boisson' => 'integer',
         'id_snack' => 'integer',
+        'image_url' => 'string',
         'prix' => 'integer'
     ];
 }

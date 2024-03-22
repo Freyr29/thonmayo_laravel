@@ -19,11 +19,12 @@ class Menus extends Migration
             `id_sandwich` int(255) NOT NULL,
             `id_boisson` int(255) NOT NULL,
             `id_snack` int(255) DEFAULT NULL,
+            `image_url` varchar(255) NOT NULL,
             `prix` float NOT NULL
         )');
-        DB::statement('INSERT INTO menus VALUES(1,"Menu du midi", 1, 1, 1, 13)');
-        DB::statement('INSERT INTO menus VALUES(2,"Menu du plaisir", 2, 1, 2, 14)');
-        DB::statement('INSERT INTO menus VALUES(3,"Menu rapide", 1, 3, 3, 12)');
+        DB::statement('INSERT INTO menus VALUES(1,"Menu du midi", 1, 1, 1,"image/", 13)');
+        DB::statement('INSERT INTO menus VALUES(2,"Menu du plaisir", 2, 1, 2,"image/", 14)');
+        DB::statement('INSERT INTO menus VALUES(3,"Menu rapide", 1, 3, 3,"image/", 12)');
     }
 
     /**
