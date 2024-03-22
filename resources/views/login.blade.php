@@ -61,7 +61,7 @@
                                   <input type="submit" name="submit" value="Continue">
                                 </div>
                                 <div class="field">
-                                <a class="ssolink" href="{{ route('register') }}">Vous n'avez pas encore de compte? </br> Créer un compte</a>
+                                    <a class="ssolink" href="{{ route('register') }}">Vous n'avez pas encore de compte? </br> Créer un compte</a>
                                 </div>
                             </form>
                         </div>
