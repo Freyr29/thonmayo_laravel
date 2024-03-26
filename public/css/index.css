@@ -53,6 +53,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-left: 80px;
+    z-index: 999;
 }
 
 .titre {
@@ -224,6 +225,7 @@ header {
     transition: width .35s cubic-bezier(var(--transition-main), 1);
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 1000;
 }
 #navbar:hover {
     width: 16em;
@@ -561,4 +563,26 @@ a.ssolink {
 .savebutton:visited {
     color: white;
     text-decoration: none;
+}
+
+.cadre {
+    margin-top: 82px; 
+    margin-left: 85px; 
+    height: calc(100vh - 82px);
+    width: calc(100% - 347px); 
+    background-color: white;
+    position: absolute;
+    overflow-y: auto;          
+}
+
+.total {
+    margin-top: 106px; 
+    height: 200px;             
+    width: 250px;              
+    position: fixed;
+    top: 0;
+    right: 5px;
+    background-color: white;
+    z-index: 999;              
+    overflow-y: auto;          
 }

@@ -16,4 +16,4 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
     }
 }
-composer require laravel/ui ;
+// composer require laravel/ui ;

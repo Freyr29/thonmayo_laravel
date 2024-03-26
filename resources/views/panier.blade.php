@@ -17,5 +17,11 @@
         <div class="commander"><a class="buttonpaid" href="">Commander</a></div>
     </header>
     @include('layout.layout_menu')
+
+
+    <div class="cadre">
+        <div>Bonjour</div>
+    </div>
+    <div class="total">Total : 800€</div>
 </body>
 </html>

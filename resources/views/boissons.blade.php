@@ -13,6 +13,7 @@
 <body>
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Les Boissons de ThonMayo</div>
+        <div class="utilisateur"><a class="user" href="{{ route('profil') }}"><i class="fa-solid fa-user"></i></a></div>
         <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
         <div class="seCo"><a class="log" href="{{ route('login') }}">se connecter<i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
     </header>
@@ -20,7 +21,7 @@
     <div style="display: flex; justify-content: center; align-items: flex-start; height: 90vh;">
     <div style="width: 100%; max-width: 1200px; margin-top: 5%; margin-left: 10%;">
         <div class="col-span-12 grid grid-cols-3 gap-4">
-            <div class="card min-w-0 max-w-md" style="display: flex; gap: 10%;">
+            <div class="card min-w-0 max-w-md sand3">
                 @foreach ($boissons as $boisson)
                     <div class="bg-white shadow-md rounded-lg overflow-hidden w-72">
                         <!-- Utiliser l'URL de l'image depuis la base de données -->
