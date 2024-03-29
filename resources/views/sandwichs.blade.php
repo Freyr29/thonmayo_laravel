@@ -25,7 +25,7 @@
                     @foreach ($sandwichs as $sandwich)
                         <div class="bg-white shadow-md rounded-lg overflow-hidden w-72">
                             <!-- Utiliser l'URL de l'image depuis la base de données -->
-                            <img src="{{ $sandwich->image_url }}" alt="Image du sandwich {{ $sandwich->nom_sandwich }}" style="width: 300px; height: 300px; object-fit: cover;" class="w-full h-48 object-cover">
+                            <img src="{{ $sandwich->image_url }}" alt="Image du sandwich {{ $sandwich->nom_sandwich }}" style="width: 300px; height: 300px; object-fit: cover;" class="w-full h-48 object-cover boxImage">
                             <div class="p-4">
                                 <h2 class="font-semibold text-lg">{{ $sandwich->nom_sandwich }}</h2>
                                 <p class="text-gray-600">{{ $sandwich->prix }}€</p>

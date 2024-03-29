@@ -56,6 +56,10 @@ header {
     z-index: 999;
 }
 
+hr {
+    margin: 40px 0px;
+}
+
 .titre {
     margin-right: 5em;
     color: white;
@@ -568,11 +572,13 @@ a.ssolink {
 .cadre {
     margin-top: 82px; 
     margin-left: 85px; 
-    height: calc(100vh - 82px);
+    height: calc(100vh - 115px);
     width: calc(100% - 347px); 
     background-color: white;
     position: absolute;
-    overflow-y: auto;          
+    overflow-y: auto;
+    padding: 50px 25px 50px 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .total {
@@ -584,5 +590,43 @@ a.ssolink {
     right: 5px;
     background-color: white;
     z-index: 999;              
-    overflow-y: auto;          
+    overflow-y: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.article {
+    display: flex;
+
+}
+
+.textArticle {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.imageArticle{
+    width: 200px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nomArticle {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.descArticle{
+    font-size: 18px;
+}
+
+.prixArticle{
+    font-size: 18px;
+}
+
+.boxImage {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }

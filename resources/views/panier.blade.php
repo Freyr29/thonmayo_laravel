@@ -18,10 +18,37 @@
     </header>
     @include('layout.layout_menu')
 
-
     <div class="cadre">
-        <div>Bonjour</div>
+        <div class="article">
+            <img src="{{ asset('image/london.png') }}" alt="london" class="imageArticle">
+            <div class="textArticle">
+                <div class="nomArticle">London</div>
+                <div class="descArticle">Pain complet, roast beef, cheddar affiné, roquette, chutney aux oignons rouges.</div>
+                <div class="prixArticle">9€</div>
+            </div>
+        </div>
+        <hr>
+        <div class="article">
+            <img src="{{ asset('image/oasis-33cl.png') }}" alt="oasis" class="imageArticle">
+            <div class="textArticle">
+                <div class="nomArticle">Oasis</div>
+                <div class="descArticle">Canette de 33cl</div>
+                <div class="prixArticle">1.76€</div>
+            </div>
+        </div>
+        <hr>
+        <div class="article">
+            <img src="{{ asset('image/frites-a-la-poele.jpeg') }}" alt="frites" class="imageArticle">
+            <div class="textArticle">
+                <div class="nomArticle">Frites maisons</div>
+                <div class="descArticle">Pommes de terre françaises, cuites à l'huile d'olive</div>
+                <div class="prixArticle">2.43€</div>
+            </div>
+        </div>
     </div>
-    <div class="total">Total : 800€</div>
+    <div class="total">
+        <div class="prixTotal">Total :</div>
+        <button>Paye ta mère</button>
+    </div>
 </body>
 </html>
