@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\View\View;
+use App\Models\Snacks;
 
 class SnacksController extends Controller
 {
@@ -13,7 +14,7 @@ class SnacksController extends Controller
 
     public function show(): View
     {
-        $snacks = DB::select('select * from snacks');
+        $snacks = Snacks::all();
 
         return view('snacks')->with('snacks', $snacks);
     }

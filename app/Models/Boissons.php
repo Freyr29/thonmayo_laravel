@@ -37,4 +37,6 @@ class Boissons extends Authenticatable
         'type' => 'string',
         'taille_cl' => 'integer'
     ];
+
+    public $timestamps = false;
 }

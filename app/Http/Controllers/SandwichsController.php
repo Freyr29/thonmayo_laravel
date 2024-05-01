@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\View\View;
+use App\Models\Sandwich;
 
 class SandwichsController extends Controller
 {
@@ -13,7 +14,7 @@ class SandwichsController extends Controller
 
     public function show(): View
     {
-        $sandwichs = DB::select('select * from sandwich');
+        $sandwichs = Sandwich::all();
 
         return view('sandwichs')->with('sandwichs', $sandwichs);
     }

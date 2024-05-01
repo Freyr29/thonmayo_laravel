@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\View\View;
+use App\Models\Menus;
 
 class MenusController extends Controller
 {
@@ -13,8 +14,8 @@ class MenusController extends Controller
 
     public function show(): View
     {
-        $menus = DB::select('select * from menus');
-
+        $menus = Menus::all();
+        
         return view('menus')->with('menus', $menus);
     }
 }

@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class Sandwich extends Migration
 {
@@ -12,13 +14,14 @@ class Sandwich extends Migration
      */
     public function up()
     {
-        DB::statement('CREATE TABLE IF NOT EXISTS sandwich (
-            `id_sandwich` int(255) AUTO_INCREMENT PRIMARY KEY,
-            `nom_sandwich` varchar(255) NOT NULL,
-            `ingredients` varchar(1000) NOT NULL,
-            `image_url` varchar(1000) NOT NULL,
-            `prix` float NOT NULL
-        )');
+        Schema::create('sandwich', function (Blueprint $table) {
+            $table->increments('id_sandwich');
+            $table->string('nom_sandwich');
+            $table->string('ingredients');
+            $table->string('image_url');
+            $table->float('prix');
+        });
+
         DB::statement('INSERT INTO sandwich VALUES(1, "Le London", "Pain complet, roast beef, cheddar affiné, roquette, chutney aux oignons rouges.", "image/london.png", 9)');
         DB::statement('INSERT INTO sandwich VALUES(2, "Le Santiago ", "Pain aux sésames, chorizo, tabasco, salade, rondelles de poivrons, jalapenos.", "image/santiago.png", 7)');
         DB::statement('INSERT INTO sandwich VALUES(3, "Le Dakar", "Pain complet, poulet frit, pastèque, sauce michigan.", "image/Le dakar.png", 8.5)');
