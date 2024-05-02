@@ -47,8 +47,8 @@
         </div>
     </div>
     <div class="total">
-        <div class="prixTotal">Total :</div>
-        <button>Paye ta mère</button>
+        <div class="prixTotal">Total : 13,19€</div>
+        <button class="payer">Payer</button>
     </div>
 </body>
 </html>
