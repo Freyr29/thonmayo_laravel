@@ -33,5 +33,8 @@ class Snacks extends Authenticatable
         'id_snack' => 'integer',
         'prix' => 'integer'
     ];
-}
 
+    public $timestamps = false;
+
+    protected $table = "snacks";
+}

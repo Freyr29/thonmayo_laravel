@@ -25,9 +25,59 @@
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="field padding-bottom--24">
-                                    <label for="name">{{ __('Nom') }}</label>
-                                    <input id="name" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                                    @error('name')
+                                    <label for="nom">{{ __('Nom') }}</label>
+                                    <input id="nom" type="text" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus>
+                                    @error('nom')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="field padding-bottom--24">
+                                    <label for="prenom">{{ __('Prenom') }}</label>
+                                    <input id="prenom" type="text" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus>
+                                    @error('prenom')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="field padding-bottom--24">
+                                    <label for="phone">{{ __('Phone') }}</label>
+                                    <input id="phone" type="text" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="field padding-bottom--24">
+                                    <label for="address">{{ __('Address') }}</label>
+                                    <input id="address" type="text" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+                                    @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="field padding-bottom--24">
+                                    <label for="pays">{{ __('Pays') }}</label>
+                                    <input id="pays" type="text" name="pays" value="{{ old('pays') }}" required autocomplete="pays" autofocus>
+                                    @error('pays')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="field padding-bottom--24">
+                                    <label for="ville">{{ __('Ville') }}</label>
+                                    <input id="ville" type="text" name="ville" value="{{ old('ville') }}" required autocomplete="ville" autofocus>
+                                    @error('ville')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -62,6 +112,7 @@
                                     <div class="field padding-bottom--24">
                                         <input type="submit" name="submit" value="S'inscrire">
                                     </div>
+                                    <p>Vous avez déjà un compte ? <a href="/register">Connectez-vous</a>.</p>
                                 </div>
                             </form>
                         </div>

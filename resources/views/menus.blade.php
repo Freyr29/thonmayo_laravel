@@ -9,13 +9,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@300 & display=swap');
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
         <div class="titre" style="font-family: 'Montserrat', sans-serif;">Les Menus de ThonMayo</div>
         <div class="utilisateur"><a class="user" href="{{ route('profil') }}"><i class="fa-solid fa-user"></i></a></div>
         <div class="panier"><a class="cadi" href="{{ route('panier') }}"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        <div class="seCo"><a class="log" href="{{ route('login') }}">se connecter<i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
+        @guest
+        <div class="seCo"><a class="log" href="{{ route('login') }}">Se connecter<i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
+        @endguest
+        @auth
+        <div class="utilisateur"><a class="user" href="{{ route('profil') }}"><i class="fa-solid fa-user"></i></a></div>
+        @endauth
     </header>
     @include('layout.layout_menu')
     <div class="sand">
@@ -47,5 +53,28 @@
             </div>
         </div>
     </div>
+<script>
+    function addToCard(id) {
+        var quantity = prompt("Combien voulez-vous en ?");
+        while(isNaN(quantity)) {
+            quantity = prompt("Combien voulez-vous en ?");
+        }
+        $.ajax({
+            url: "{{ route('addpanier') }}",
+            type: "POST",
+            data: {"type": "menus", "id":id, "quantity": quantity, "_token": "{{ csrf_token() }}"},
+            success: function(resp) {
+                if(resp["error"] !== undefined) {
+                    alert(resp["error"])
+                } else {
+                    alert("Votre item a bien été ajouté au panier !")
+                }
+            },
+            error: function(err) {
+                alert("Une erreur est survenue, veuillez réessayer")
+            }
+        })
+    }
+</script>
 </body>
 </html>
