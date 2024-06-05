@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class Snacks extends Migration
 {
@@ -12,13 +14,14 @@ class Snacks extends Migration
      */
     public function up()
     {
-        DB::statement('CREATE TABLE IF NOT EXISTS snacks (
-            `id_snack` int(255) AUTO_INCREMENT PRIMARY KEY,
-            `nom_snack` varchar(255) NOT NULL,
-            `ingredients` varchar(1000) NOT NULL,
-            `image_url` varchar(1000) NOT NULL,
-            `prix` float NOT NULL
-        )');
+        Schema::create('snacks', function (Blueprint $table) {
+            $table->increments('id_snack');
+            $table->string('nom_snack');
+            $table->string('ingredients');
+            $table->string('image_url');
+            $table->float('prix');
+        });
+
         DB::statement('INSERT INTO snacks VALUES(1,"Frites maisons","Pommes de terre françaises, cuites à l\'huile d\'olive","image/frites-a-la-poele.jpeg", 3.43)');
         DB::statement('INSERT INTO snacks VALUES(2,"Patates sautées maisons","Pommes de terre françaises","image/potatoes.jpg", 4.23)');
         DB::statement('INSERT INTO snacks VALUES(3,"Salade maison","Salade à la tomate et à la salade","image/salade.png", 1.69)');

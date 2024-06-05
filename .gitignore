@@ -15,3 +15,5 @@ yarn-error.log
 /.vscode
 docker-compose.yaml
 Dockerfile
+.gitignore
+.gitattributes

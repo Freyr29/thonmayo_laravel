@@ -6,6 +6,8 @@ use App\Http\Controllers\BoissonsController;
 use App\Http\Controllers\SnacksController;
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\MenusController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -20,6 +22,9 @@ use App\Http\Controllers\MenusController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+// Route non-authentifiée
 
 // Route principale redirigeant vers l'accueil
 Route::get('/', function () {
@@ -43,17 +48,24 @@ Route::get('/boissons', [BoissonsController::class, 'show'])->name('boissons');
 // Snacks
 Route::get('/snacks', [SnacksController::class, 'show'])->name('snacks');
 
-
-Route::get('/panier', [PanierController::class, 'index'])->middleware('auth')->name('panier');
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::get('/profil', function () {
-    return view('profil');
-})->name('profil');
 
+// Route authentifiée 
+Route::post('/panier/add', [PanierController::class, 'handleAddCard'])->middleware('auth')->name('addpanier');
+Route::post('/panier/remove', [PanierController::class, 'handleRemoveCard'])->middleware('auth')->name('removepanier');
+Route::get('/panier', [PanierController::class, 'index'])->middleware('auth')->name('panier');
+
+Auth::routes();
+
+Route::get('/profil', [ProfilController::class, 'show'])->middleware('auth')->name('profil');
+Route::post('/profil', [ProfilController::class, 'update'])->middleware('auth')->name('updateprofil');
+
+// Route admin
+Route::get('/admin', [AdminController::class, 'index'])->middleware('auth')->name('admin');
+Route::get('/admin/user', [AdminController::class, 'getUser'])->middleware('auth')->name('getUser');
+Route::post('/admin/user', [AdminController::class, 'modifyUser'])->middleware('auth')->name('modifyUser');

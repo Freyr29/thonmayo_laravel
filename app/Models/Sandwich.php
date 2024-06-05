@@ -33,4 +33,8 @@ class Sandwich extends Authenticatable
         'id_sandwich' => 'integer',
         'prix' => 'integer'
     ];
+
+    public $timestamps = false;
+
+    protected $table = "sandwich";
 }
