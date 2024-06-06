@@ -61,7 +61,6 @@ Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous 
 ![image](https://github.com/Freyr29/thonmayo_laravel/assets/91483937/131d136a-68d3-48a2-816c-5ef7c4c19965)
 ![image](https://github.com/Freyr29/thonmayo_laravel/assets/91483937/69490ef0-064c-4916-9461-69311c44630f)
 ![image](https://github.com/Freyr29/thonmayo_laravel/assets/91483937/164cb7c3-3cd1-4b00-aa7e-7c71de25b668)
-![image](https://github.com/Freyr29/thonmayo_laravel/assets/91483937/164cb7c3-3cd1-4b00-aa7e-7c71de25b668)
 ![image](https://github.com/Freyr29/thonmayo_laravel/assets/91483937/eca811da-b0f0-485b-9d75-360a6c38276e)
 ![image](https://github.com/Freyr29/thonmayo_laravel/assets/91483937/252ecd64-9ab6-473b-aa08-2acd7f4e51ac)
 
